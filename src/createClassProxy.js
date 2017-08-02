@@ -210,7 +210,7 @@ function createFallback(Component) {
   };
 }
 
-export default function createClassProxy(Component) {
+function createClassProxy(Component) {
   return Component.__proto__ && supportsProtoAssignment() ?
     proxyClass(Component) :
     createFallback(Component);
